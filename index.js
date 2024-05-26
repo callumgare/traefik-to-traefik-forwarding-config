@@ -1,7 +1,7 @@
 import http from 'node:http'
 
 // Required env vars
-const baseUrl = process.env.UPSTREAM_TRAEFIK_API_URL
+const baseUrl = process.env.UPSTREAM_TRAEFIK_API_URL?.replace(/\/+$/, "")
 const serviceName = process.env.NAME_FOR_SERVICE
 const entryPoints = process.env.ENDPOINTS_FOR_SERVICE?.split(",").map(entrypoint => entrypoint.trim())
 
