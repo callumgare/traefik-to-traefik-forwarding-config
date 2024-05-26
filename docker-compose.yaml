@@ -1,0 +1,15 @@
+services:
+  app:
+    platform: linux/amd64
+    build:
+      context: .
+    ports:
+      - '8000:80'
+    environment:
+      # Required
+      UPSTREAM_TRAEFIK_API_URL: http://example.com/api
+      NAME_FOR_SERVICE: forwarding-upstream
+      ENDPOINTS_FOR_SERVICE: example-endpoint,second-example-endpoint
+      # Optional
+      UPSTREAM_TRAEFIK_ENDPOINTS_FILTER: example-upstream-endpoint-to-filter-by
+      PORT: 80 # Default is 80

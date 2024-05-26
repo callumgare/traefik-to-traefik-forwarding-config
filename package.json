@@ -1,0 +1,16 @@
+{
+  "name": "traefik-api-to-yaml-config",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "release": "release-it",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Callum Gare <callum@gare.au>",
+  "license": "ISC",
+  "devDependencies": {
+    "release-it": "^17.3.0"
+  }
+}
