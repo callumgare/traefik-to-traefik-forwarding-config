@@ -11,14 +11,22 @@ services:
     ports:
       - '8000:80'
     environment:
-      UPSTREAM_TRAEFIK_API_URL: http://example.com/api # The URL for the API endpoint of the upstream 
-        # traefik instance
-      NAME_FOR_SERVICE: forwarding-upstream # A name to use for the traefik service which will be added 
-        # to the proxy traefik instance
-      ENDPOINTS_FOR_SERVICE: example-endpoint,second-example-endpoint # A comma separated list of 
-        # endpoints which the routers added to the proxy traefik instance will be attached to
-      UPSTREAM_TRAEFIK_ENDPOINTS_FILTER: example-upstream-endpoint-to-filter-by # (optional) A comma 
-        # separated list of endpoints which routers in the upstream traefik instance must be attached 
-        # to in order for them to be included in the list to add to the proxy traefik instance
-      PORT: 80 # (optional) The port which the script http server runs on. Defaults to 80.
+      # The URL for the API endpoint of the upstream traefik instance
+      UPSTREAM_TRAEFIK_API_URL: http://example.com/api
+
+      # A name to use for the traefik service which will be added to the proxy traefik
+      # instance
+      NAME_FOR_SERVICE: forwarding-upstream
+
+      # A comma separated list of endpoints which the routers added to the proxy traefik
+      # instance will be attached to
+      ENDPOINTS_FOR_SERVICE: example-endpoint,second-example-endpoint
+      
+      # (optional) A comma separated list of endpoints which routers in the upstream traefik
+      # instance must be attached to in order for them to be included in the list to add to 
+      # the proxy traefik instance
+      UPSTREAM_TRAEFIK_ENDPOINTS_FILTER: example-upstream-endpoint-to-filter-by
+
+      # (optional) The port which the script http server runs on. Defaults to 80.
+      PORT: 80 
 ```
