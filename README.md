@@ -30,3 +30,6 @@ services:
       # (optional) The port which the script http server runs on. Defaults to 80.
       PORT: 80 
 ```
+
+## Related Projects
+After creating this I've since come across [Traefik Kobling](https://github.com/ldellisola/TraefikKobling) which seems like it might do the same thing and appears to be better maintained/documented so you might want to use that instead.
